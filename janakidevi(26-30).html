@@ -1,0 +1,197 @@
+<html>
+    <head>
+        <title>Pages</title>
+        <link rel="stylesheet" href="html.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+       <link rel="stylesheet" media="all and (max-width:480px)" href="html.css">
+       
+    </head>
+    <body>
+        
+
+<img class="images" src="Captures.png">
+<p class="a">Integration over the uniform priors for <i>A</i> and <i>B</i> gives the data probability given model <i>M2</i>:</p>
+<img class="images" src="Capture1.png">
+<p class="a">From this and Equation (4) we obtain the Bayes factor for the undirected data model:
+</p>
+<img class="images" src="Captures2.png">
+<p class="a">The second approach to model independence between <i>A</i> and <i>B</i> gives the following:</p>
+<img class="images" src="Capture3.png">
+<p class="a">We can now find the Bayes factor relating models <i>M1’</i> (Equation 5) and <i>M2’</i> (Equation 7),<br>
+    with no prior preference of either:</p>
+    &nbsp;&nbsp;<img class="images" src="Capture4.png">
+    <p class="a">&nbsp;&nbsp;&nbsp;Consider now a data matrix with three variables, <i>A</i>, <i>B</i> and <i>C</i> (Figure 2). The analysis of<br>
+        the model <i>M3</i> where full dependencies are accepted is very similar to <i>M1</i> above (Equation<br>
+        4). For the model <i>M4</i> without the link between <i>A</i> and <i>B</i>, we should partition the data matrix<br>
+        by the value of <i>C</i> and multiply the probabilities of the blocks with the probability of the<br>
+        partitioning defined by <i>C</i>. Since we are ultimately after the Bayes factor relating <i>M4</i> and <i>M3</i></p>
+        <br><br>
+       
+            
+            <p class="a">(respectively <i>M4 ’</i> and <i>M3 ’</i>), we can simply multiply the Bayes factors relating  <i>M2</i> and <i>M1</i><br>
+                (Equation 6) (respectively <i>M2’</i> and <i>M1’</i>) for each block of the partition to get the Bayes factors<br>
+                sought:</p>
+                <img class="images" src="Capture5.png">
+                <p class="a">&nbsp;&nbsp;The directed case is similar (Heckerman, 1997). The value of the gamma function is rather<br>
+                    large even for moderate values of its argument. For this reason, the formulas in this section<br>
+                    are always evaluated in logarithm form, where products like in Formula 9 translate to sums<br>
+                    of logarithms.</p>
+                    <h4 style="font-weight: 400;">Causality and Direction in Graphical Models</h4>
+                    <p class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Normally, the identification of cause and effect must depend on one’s understand-<br>
+                        ing of the mechanisms that generated the data. There are several claims or semi-claims<br>
+                        that purely computational statistical methods can identify causal relations among a set<br>
+                        of variables. What is worth remembering is that these methods create suggestions, and<br>
+                        that even the concept of cause is not unambiguously defined but a result of the way the<br>
+                        external world is viewed. The claim that causes can be found is based on the observation<br>
+                        that directionality can in some instances be identified in graphical models. Consider the<br>
+                        models <i>M4'</i>' and <i>M4'</i> of Figure 2. In <i>M4'</i>, variables <i>A</i> and <i>B</i> could be expected to be<br>
+                        marginally dependent, whereas in <i>M4''</i> they would be independent. On the other hand,<br>
+                        conditional on the value of <i>C</i>, the opposite would hold: dependence between <i>A</i> and <i>B</i><br>
+                        in <i>M4''</i> and independence in <i>M4'</i> ! This means that it is possible to identify the direction<br>
+                        of arrows in some cases in directed graphical models. It is difficult to believe that the<br>
+                        causal influence should not follow the direction of arrows in those cases. Certainly, this<br>
+                        is a potentially useful idea, but it should not be applied in isolation from the application<br>
+                        expertise, as the following example illustrates. It is known as Simpson’s Paradox,<br>
+                        although it is not paradoxical at all.</p>
+                        <p class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consider the application of drug testing. We have a new wonder drug that we hope<br>
+                            cures an important disease. We find a population of 800 subjects who have the disease;<br>
+                            they are asked to participate in the trial and given a choice between the new drug and<br>
+                            the alternative treatment currently assumed to be best. Fortunately, half the subjects,<br>
+                            400, choose the new drug. Of these, 200 recover. Of those 400 who chose the traditional<br>
+                            treatment, only 160 recovered. Since the test population seems large enough, we can<br>
+                            conclude that the new drug causes recovery in 50% of patients, whereas the traditional<br>
+                            treatment only cures 40%. But the drug may not be advantageous for men. Fortunately,<br>
+                            it is easy to find the gender of each subject and to make separate judgments for men and<br>
+                            women. So when men and women are separated, we find the following table:</p>
+                           
+                               
+                                <p class="a"><i>Table 1: Outcomes for men, women, and men+women in a clinical trial</i></p>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<table class="tab" border="6" cellpadding="8" cellspacing="8" style="padding-left: 5%;">
+                                    <tr><th></th><th border="none">recovery </th><th>no recovery </th><th>Total </th><th>rec. rate</th></tr>
+                                    <tr><td>Men treated </td><td>180</td><td>120</td><td>300</td><td>60%</td></tr>
+                                    <tr><td>not treated  </td><td>70</td><td>30</td><td>100</td><td>70%</td></tr>
+                                    <tr><td>Women treated  </td><td>20</td><td>80</td><td>100</td><td>20%</td></tr>
+                                    <tr><td>not treated  </td><td>90</td><td>210</td><td>300</td><td>30%</td></tr>
+                                    <tr><td>Tot treated</td><td>200</td><td>200</td><td>400</td><td>50%</td></tr>
+                                    <tr><td>not treated  </td><td>240</td><td>160</td><td>400</td><td>40%</td></tr>
+                                </table><br>
+                                <p class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obviously, the recovery rate is lower for the new treatment, both for women and<br>
+                                    men. Examining the table reveals the reason, which is not paradoxical at all: the disease<br>
+                                    is more severe for women, and the explanation for the apparent benefits of the new<br>
+                                    treatment is simply that it was tried by more men. The gender influences both the severity<br>
+                                    of the disease and the willingness to test the new treatment; in other words, gender is<br>
+                                    a confounder. This situation can always occur in studies of complex systems like living<br>
+                                    humans and most biological, engineering, or economic systems that are not entirely<br>
+                                    understood, and the confounder can be much more subtle than gender. When we want<br>
+                                    to find the direction of causal links, the same effect can occur. In complex systems of<br>
+                                    nature, and even in commercial databases, it is unlikely that we have at all measured the<br>
+                                    variable that will ultimately become the explanation of a causal effect. Such an unknown<br>
+                                    and unmeasured causal variable can easily turn the direction of causal influence<br>
+                                    indicated by the comparison between models <i>M4''</i> and <i>M4'</i>, even if the data is abundant.<br>
+                                    Nevertheless, the new theories of causality have attracted a lot of interest, and if applied</p>
+                                    <p class="a"><i>Figure 3: Symptoms and causes relevant to heart problem</p></i>
+                                    <img class="images" src="image1.png">
+                                    
+                                        
+                                        <p class="a">with caution they should be quite useful (Glymour & Cooper, 1999; Pearl, 2000). Their<br>
+                                            philosophical content is that a mechanism, causality, that could earlier not or only with<br>
+                                            difficulty be formalized, has become available for analysis in observational data, whereas<br>
+                                            it could earlier only be accessed in controlled experiments.<br>
+                                            </p><br><br>
+                                            <h4 style="padding-left: 4%;">GLOBAL GRAPHICAL MODEL CHOICE</h4>
+                                            <p class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If we have many variables, their interdependencies can be modeled as a graph with<br>
+                                                vertices corresponding to the variables. The example in Fgure 3 is from Madigan and<br>
+                                                Raftery(1994) and shows the dependencies in a data matrix related to heart disease. Of<br>
+                                                course, a graph of this kind can give a data probability to the data matrix in a way<br>
+                                                analogous to the calculations in the previous section, although the formulas become<br>
+                                                rather involved and the number of possible graphs increases dramatically with the<br>
+                                                number of variables. It is completely infeasible to list and evaluate all graphs if there is<br>
+                                                more than a handful of variables. An interesting possibility to simplify the calculations<br>
+                                                would use some kind of separation, so that an edge in the model could be given a score<br>
+                                                independent of the inclusion or exclusion of most other potential edges. Indeed, the<br>
+                                                derivations of last section show how this works. Let <i>C</i> in that example be a compound<br>
+                                                variable, obtained by merging columns <i>c1, … cd.</i> If two models <i>G</i> and <i>G’ </i>differ only by<br>
+                                                the presence and absence of the edge <i>(A, B),</i> and if there is no path between <i>A</i> and <i>B </i>except<br>
+                                               through vertex set <i>C</i>, then the expressions for <i>p(n |M <sub>4</sub>) and p(n |M <sub>3</sub>)</i> above will<br>
+                                                    become factors of the expressions for <i>p(n |G )</i>and <i>p(n |G'),</i> respectively, and the other<br>
+                                                    
+                                                    factors will be the same in the two expressions. Thus, the Bayes factor relating the<br>
+                                                    probabilities of <i>G </i>and <i>G’</i> is the same as that relating <i>M4</i> and <i>M3</i>. This result is<br>
+                                                    independent of the choice of distributions and priors of the model, since the structure<br>
+                                                    of the derivation follows the structure of the graph of the model — it is equally valid for<br>
+                                                    Gaussian or other data models, as long as the parameters of the participating distributions<br>
+                                                    are assumed independent in the prior assumptions.</p>
+                                                    <p class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We can now think of various “greedy”methods for building high probability<br>
+                                                        interaction graphs relating the variables (columns in the data matrix). It is convenient and<br>
+                                                        customary to restrict attention to either decomposable (chordal) graphs or directed<br>
+                                                        acyclic graphs. Chordal graphs are fundamental in many applications of describing<br>
+                                                        relationships between variables (typically variables in systems of equations or inequali-<br>
+                                                        ties). They can be characterized in many different but equivalent ways(see Rose, 1970).<br>
+                                                        One simple way is to consider a decomposable graph as consisting of the union of a<br>
+                                                        number of maximally connected complete graphs (cliques, or maximally connected<br>
+                                                        subgraphs), in such a way that (i) there is at least one vertex that appears in only one<br>
+                                                        clique (a simplicial vertex), and (ii) if an edge to a simplicial vertex is removed, another<br>
+                                                        decomposable graph remains, and (iii) the graph without any edges is decomposable. A<br>
+                                                        characteristic feature of a simplicial vertex is that its neighbors are completely connected<br>
+                                                        by edges. If the graph <i>G’</i> obtained by adding an edge between <i>s </i>and <i>n</i> to <i>G</i> is also<br>
+                                                        decomposable, we will call such an edge a <i>permissible edge of </i><i>G</i>. This concept implies<br>
+                                                        a generation structure (a directed acyclic graph whose vertices are decomposable graphs<br>
+                                                        on the set of vertices) containing all decomposable graphs on the variable set. An</p>
+                                                   
+                                                       
+                                                        <p class="a">interesting feature of this generation process is that it is easy to compute the Bayes factor<br>
+                                                            comparing the posterior probabilities of the graphs <i>G</i> and <i>G</i>’ as graphical models of the<br>
+                                                            data: let s correspond to <i>A</i>, <i>n</i> to <i>B</i>, and the compound variable obtained by fusing the<br>
+                                                            neighbors of <i>s</i> to <i>C</i> in the analysis of Section 5. Without explicit prior model probabilities<br>
+                                                            we have:</p>
+                                                            <img class="images" src="image2.png">
+                                                            <p class="a">A search for high probability graphs can now be organized as follows:</p>
+                                                            <p class="a">1.&nbsp; Start from the graph <i>G0</i> without edges.</p>
+                                                            <p class="a">2.&nbsp; Repeat: find a number of permissible edges that give the highest Bayes factor, and<br>
+                                                                add the edge if the factor is greater than 1. Keep a set of highest probability graphs<br>
+                                                                encountered.<br>
+                                                                
+                                                            <p class="a">3.&nbsp; Then repeat: For the high probability graphs found in the previous step, find<br>
+                                                                simplicial edges whose removal increases the Bayes factor the most.
+                                                            </p>
+                                                            <p class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For each graph kept in this process, its Bayes factor relative to <i>G0</i> can be found by<br>
+                                                                multiplying the Bayes factors in the generation sequence. A procedure similar to this one<br>
+                                                                is reported by Madigan and Raftery (1994), and its results on small variable sets was<br>
+                                                                found good, in that it found the best graphs reported in other approaches. For directed<br>
+                                                                graphical models, a similar method of obtaining high probability graphs is known as the<br>
+                                                                K2 algorithm (Berthold & Hand, 1999).</p>
+                                                                <h4>NON-CATEGORICAL VARIABLES</h4>
+                                                                <p class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We will now consider data matrices made up from ordinal and real valued data, and<br>
+                                                                    then matrices consisting of ordinal, real, and categorical data. The standard choice for<br>
+                                                                    a real valued data model is the univariate or multivariate Gaussian or normal distribution.<br>
+                                                                    It has nice theoretical properties manifesting themselves in such forms as the central limit<br>
+                                                                    theorem, the least squares method, principal components, etc. It is possible to formulate<br>
+                                                                    the theory of the model choice section using inverse Wishart distributions as conjugate<br>
+                                                                    priors for multivariate normal distributions, but this is leads to fairly complex formulas<br>
+                                                                    and is seldom implemented (Bernardo & Smith, 1994). The normal distribution is also<br>
+                                                                    unsatisfactory for many data sets occurring in practice, because of its thin tail and<br>
+                                                                    because many real life distributions deviate terribly from it. Several approaches to solve<br>
+                                                                    this problem are available. One is to consider a variable as being obtained by mixing<br>
+                                                                    several normal distributions. Another is to disregard the distribution over the real line,<br>
+                                                                    and considering the variable as just being made up of an ordered set of values. A quite<br>
+                                                                    useful and robust method is to discretize the variables. This is equivalent to assuming<br>
+                                                                    that their probability distribution functions are piecewise constant. Discretized variables<br>
+                                                                    can be treated as categorical variables by the methods described above. The methods<br>
+                                                                    waste some information, but are quite simple and robust. Typically, the granularity of the<br>
+                                                                    discretization is chosen so that a reasonably large number of observations fall in each</p>
+                                                                    
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

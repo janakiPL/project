@@ -1,0 +1,31 @@
+.a{
+    font-size: 14px;
+    text-align: justify;
+    font-display: grid;
+   
+    
+    
+}
+.b{
+    font-size: 13px;
+    text-align: justify;
+}
+
+body{
+    padding-left: 30%;
+    text-align: justify;
+    text-justify: inter-word;
+
+}
+.tab{
+    color: black;
+    font-size: 14px;
+   
+    border: 10px black;
+    width:55%;
+   
+   
+    
+
+  
+}
